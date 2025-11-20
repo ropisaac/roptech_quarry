@@ -23,6 +23,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -126,7 +127,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/quarry.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080?text=Quarry+Operations') center/cover no-repeat;
             color: white;
             text-align: center;
             padding: 180px 0 120px;
@@ -158,6 +159,24 @@
 
         .btn:hover {
             background-color: #c0392b;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: #e74c3c;
+            padding: 10px 20px;
+            border: 2px solid #e74c3c;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background-color: #e74c3c;
+            color: white;
         }
 
         /* About Section */
@@ -265,6 +284,312 @@
             padding: 40px 0;
         }
 
+        /* Projects Page Styles */
+        .projects-hero, .faq-hero, .guide-hero, .testimonials-hero, .blog-hero, .sustainability-hero, .contact-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://via.placeholder.com/1920x600?text=Background+Image') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 150px 0 80px;
+            margin-top: 70px;
+        }
+
+        .projects-hero h1, .faq-hero h1, .guide-hero h1, .testimonials-hero h1, .blog-hero h1, .sustainability-hero h1, .contact-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .project-date {
+            display: block;
+            margin-top: 1rem;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Styles */
+        .faq-section {
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 1rem;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 0 1.5rem;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        /* Materials Guide Styles */
+        .materials-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .materials-table th, .materials-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .materials-table th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .materials-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        .usage-calculator {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .calculator input, .calculator select {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #result {
+            grid-column: 1 / -1;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #e74c3c;
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            display: none;
+        }
+
+        /* Testimonials Styles */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .stars {
+            color: #f1c40f;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .client-info {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .client-info span {
+            display: block;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Blog Styles */
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #e74c3c;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Sustainability Styles */
+        .environmental-practices {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .practice-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .practice-card h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Contact Options Styles */
+        .contact-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-method {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .quick-form input, .quick-form select, .quick-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .quick-form button {
+            width: 100%;
+        }
+
         /* Responsive Styles */
         @media (max-width: 768px) {
             .menu-toggle {
@@ -301,17 +626,26 @@
                 font-size: 1.1rem;
             }
 
-            .service-list {
+            .service-list, .gallery-grid, .featured-projects, .testimonials-grid, .blog-posts, .environmental-practices, .contact-options {
                 grid-template-columns: 1fr;
             }
 
-            .gallery-grid {
+            .calculator {
                 grid-template-columns: 1fr;
+            }
+
+            .materials-table {
+                display: block;
+                overflow-x: auto;
+            }
+
+            .projects-hero h1, .faq-hero h1, .guide-hero h1, .testimonials-hero h1, .blog-hero h1, .sustainability-hero h1, .contact-hero h1 {
+                font-size: 2.2rem;
             }
         }
 
         /* Animation for service cards and gallery images */
-        .service-card, .gallery-grid img {
+        .service-card, .gallery-grid img, .project-card, .testimonial-card, .blog-post, .practice-card {
             opacity: 0;
             transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
@@ -339,6 +673,10 @@
                     </div>
                 </div>
                 <a href="#gallery">Gallery</a>
+                <a href="#projects">Projects</a>
+                <a href="#faq">FAQ</a>
+                <a href="#materials-guide">Materials Guide</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#location">Location</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -408,12 +746,208 @@
             </p>
 
             <div class="gallery-grid">
-                <img src="images/quarry1.jpg" alt="Quarry Operation 1" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+1'">
-                <img src="images/quarry2.jpg" alt="Quarry Operation 2" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+2'">
-                <img src="images/quarry3.jpg" alt="Quarry Operation 3" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+3'">
-                <img src="images/quarry4.jpg" alt="Quarry Operation 4" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+4'">
-                <img src="images/quarry5.jpg" alt="Quarry Operation 5" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+5'">
-                <img src="images/quarry6.jpg" alt="Quarry Operation 6" onerror="this.src='https://via.placeholder.com/300x250?text=Quarry+Image+6'">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+1" alt="Quarry Operation 1">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+2" alt="Quarry Operation 2">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+3" alt="Quarry Operation 3">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+4" alt="Quarry Operation 4">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+5" alt="Quarry Operation 5">
+                <img src="https://via.placeholder.com/300x250?text=Quarry+Operation+6" alt="Quarry Operation 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Our Completed Projects</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                See how our materials have contributed to Kenya's infrastructure development
+            </p>
+
+            <div class="featured-projects">
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x250?text=Road+Construction" alt="Road Construction Project">
+                    <div class="project-info">
+                        <h3>Eldoret Highway Expansion</h3>
+                        <p>Supplied 5,000 tons of ballast and hardcore for this major infrastructure project</p>
+                        <span class="project-date">Completed: March 2024</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x250?text=Building+Construction" alt="Building Construction">
+                    <div class="project-info">
+                        <h3>Nairobi Commercial Complex</h3>
+                        <p>Provided aggregates and quarry dust for this 15-story development</p>
+                        <span class="project-date">Completed: January 2024</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://via.placeholder.com/350x250?text=Bridge+Project" alt="Bridge Construction">
+                    <div class="project-info">
+                        <h3>Mombasa Bridge Construction</h3>
+                        <p>Delivered specialized aggregates for this coastal infrastructure project</p>
+                        <span class="project-date">Completed: November 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Find answers to common questions about our products and services
+            </p>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What is the difference between ballast and hardcore?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ballast is clean, crushed stone used primarily for concrete mixing and railway beds, while hardcore is a mixture of larger stones and finer materials used for sub-base construction and filling.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you deliver outside Eldoret?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we deliver nationwide across Kenya. Delivery costs vary based on distance and quantity.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What payment methods do you accept?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept bank transfers, mobile money (M-Pesa), and cash payments. Corporate accounts can be set up for regular clients.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What are your operating hours?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our quarry operates Monday to Saturday from 7:00 AM to 6:00 PM. Deliveries can be arranged outside these hours for urgent projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MATERIALS GUIDE SECTION -->
+    <section id="materials-guide" class="section">
+        <div class="container">
+            <h2>Construction Materials Guide</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Learn how to choose the right materials for your project
+            </p>
+
+            <div class="materials-comparison">
+                <table class="materials-table">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Best Used For</th>
+                            <th>Particle Size</th>
+                            <th>Key Benefits</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ballast</td>
+                            <td>Concrete mixing, railway beds</td>
+                            <td>20-40mm</td>
+                            <td>High strength, clean, well-graded</td>
+                        </tr>
+                        <tr>
+                            <td>Hardcore</td>
+                            <td>Road bases, site preparation</td>
+                            <td>Varied sizes</td>
+                            <td>Excellent compaction, load-bearing</td>
+                        </tr>
+                        <tr>
+                            <td>Aggregates</td>
+                            <td>Drainage, concrete, landscaping</td>
+                            <td>10-20mm</td>
+                            <td>Versatile, various sizes available</td>
+                        </tr>
+                        <tr>
+                            <td>Quarry Dust</td>
+                            <td>Flooring base, paving, filler</td>
+                            <td>0-5mm</td>
+                            <td>Fine texture, excellent compaction</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="usage-calculator">
+                <h3>Material Calculator</h3>
+                <p>Estimate how much material you need for your project</p>
+                <div class="calculator">
+                    <select id="material-type">
+                        <option value="ballast">Ballast</option>
+                        <option value="hardcore">Hardcore</option>
+                        <option value="aggregates">Aggregates</option>
+                        <option value="quarry-dust">Quarry Dust</option>
+                    </select>
+                    <input type="number" id="area" placeholder="Area in square meters">
+                    <input type="number" id="depth" placeholder="Depth in centimeters">
+                    <button id="calculate" class="btn">Calculate</button>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section id="testimonials" class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Read about experiences from contractors and developers who trust our materials
+            </p>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Roptech Quarry supplied materials for our highway project. The quality was exceptional and delivery was always on time. Their team is professional and reliable."</p>
+                    <div class="client-info">
+                        <strong>James Kariuki</strong>
+                        <span>Project Manager, Kenya Highways Authority</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"We've been using Roptech aggregates for all our construction projects for over three years. Consistent quality and reliable service make them our preferred supplier."</p>
+                    <div class="client-info">
+                        <strong>Sarah Mwangi</strong>
+                        <span>Director, Prime Builders Ltd</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The quarry dust we ordered for our landscaping project was perfect. Fine texture and easy to work with. Will definitely use Roptech for future projects."</p>
+                    <div class="client-info">
+                        <strong>David Ochieng</strong>
+                        <span>Landscape Architect, GreenScape Designs</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -447,19 +981,32 @@
                 Ready to start your project? Contact us for quotes, deliveries, or any inquiries
             </p>
 
+            <div class="contact-options">
+                <div class="contact-method">
+                    <h3>📞 Call Us Directly</h3>
+                    <p>+254 708 596 202</p>
+                    <small>Available Monday-Saturday, 7:00 AM - 6:00 PM</small>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>📍 Visit Our Quarry</h3>
+                    <p>Eldoret, Kenya</p>
+                    <small>Open for site visits by appointment</small>
+                    <button class="btn-outline" id="getDirections">Get Directions</button>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>💬 Quick Inquiry</h3>
+                    <p>Have a simple question?</p>
+                    <button class="btn-outline" id="quickChat">Start Quick Chat</button>
+                </div>
+            </div>
+
             <div class="contact-details">
                 <div>
                     <div>
-                        <h3>📞 Phone</h3>
-                        <p style="font-size: 1.1rem;">+254 725 822 135</p>
-                    </div>
-                    <div>
                         <h3>✉️ Email</h3>
                         <p style="font-size: 1.1rem;">info@roptechquarry.co.ke</p>
-                    </div>
-                    <div>
-                        <h3>📍 Location</h3>
-                        <p style="font-size: 1.1rem;">Eldoret, Kenya</p>
                     </div>
                 </div>
             </div>
@@ -473,6 +1020,26 @@
             <p style="opacity: 0.8;">Building Kenya's Future, One Stone at a Time</p>
         </div>
     </footer>
+
+    <!-- Quick Inquiry Modal -->
+    <div id="quickInquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Quick Inquiry</h3>
+            <form class="quick-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select>
+                    <option>Product Inquiry</option>
+                    <option>Delivery Question</option>
+                    <option>Pricing</option>
+                    <option>Other</option>
+                </select>
+                <textarea placeholder="Your message..." rows="3"></textarea>
+                <button type="submit" class="btn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script>
@@ -525,9 +1092,90 @@
             }
         });
 
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+                
+                // Close all other answers
+                document.querySelectorAll('.faq-answer').forEach(item => {
+                    if (item !== answer) {
+                        item.classList.remove('active');
+                        item.previousElementSibling.querySelector('.faq-toggle').textContent = '+';
+                    }
+                });
+                
+                // Toggle current answer
+                answer.classList.toggle('active');
+                toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+            });
+        });
+
+        // Material Calculator
+        document.getElementById('calculate').addEventListener('click', function() {
+            const materialType = document.getElementById('material-type').value;
+            const area = parseFloat(document.getElementById('area').value);
+            const depth = parseFloat(document.getElementById('depth').value);
+            
+            if (isNaN(area) || isNaN(depth) || area <= 0 || depth <= 0) {
+                alert('Please enter valid area and depth values');
+                return;
+            }
+            
+            // Convert depth from cm to meters
+            const depthMeters = depth / 100;
+            
+            // Calculate volume in cubic meters
+            const volume = area * depthMeters;
+            
+            // Conversion factors (tons per cubic meter)
+            const conversionFactors = {
+                'ballast': 1.5,
+                'hardcore': 1.8,
+                'aggregates': 1.6,
+                'quarry-dust': 1.4
+            };
+            
+            const weight = volume * conversionFactors[materialType];
+            
+            // Display result
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <p>You need approximately <strong>${volume.toFixed(2)} cubic meters</strong> 
+                (about <strong>${weight.toFixed(2)} tons</strong>) of ${materialType.replace('-', ' ')}</p>
+                <p><small>Note: This is an estimate. Contact us for precise calculations.</small></p>
+            `;
+            resultDiv.style.display = 'block';
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('quickInquiryModal');
+        const quickChatBtn = document.getElementById('quickChat');
+        const closeBtn = document.querySelector('.close');
+        
+        quickChatBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Get Directions Button
+        document.getElementById('getDirections').addEventListener('click', function() {
+            window.open('https://www.google.com/maps?q=0.574632,35.206583', '_blank');
+        });
+
         // Animate elements on scroll
         function initScrollAnimations() {
-            const animatedElements = document.querySelectorAll('.service-card, .gallery-grid img');
+            const animatedElements = document.querySelectorAll('.service-card, .gallery-grid img, .project-card, .testimonial-card, .blog-post, .practice-card');
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
